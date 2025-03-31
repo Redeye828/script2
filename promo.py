@@ -15,7 +15,7 @@ logging.basicConfig(
 
 api_id = 27403135
 api_hash = '2eceb9a48c40ce29b2b7723f763c5087'
-session = 'BQGiI38AGvjysiUZVcTLIz9kONjCJggtjJgsaCyoqxLWVEaba6OwyGinfgQShFm3Mblhd5VZpEWJxzMnS47hQrx2nXq_iLQ9NdCtmnkB_aiI3XS70nDyPMRvrABhXl6lmmCHTHgfeoDnpGaisPgrtkWsew-a_J5RyHo_oTDnNnek_nI463ff53YJpu5guHWeeO1JMlCAU5bG0F17yZbGUb0VnsyEH2HXPSqk1iha4g_arooNr7xXELFXBVF8UUzSpkdkkdiSJMPsUsulwkc6Sz_ODp7GvuXLYw4Qgrweq0hZJGXEztKiIwcxdcdujO-2Kc1Khmnh1rqZ88LoTEhTIKJ0_B1BnQAAAAGdyakCAA'
+session = 'BQHEyjQATbw0wm7ZTkQaoH51-SQ2QfpE9NzCWz4aw0LVPqI9HNyLlimjRi4xz_ew2734NpNr9WvwQevWAnunoS11YPHMTN8tTnY1YdzYDuw0m4UGwpekW-6X2sa_TgpWO8LqUvtK-N-LMzLeeXNY_eXjPPwm-0O2iodsuObIFgjJt5xKDQ9LzKB1Am0AFHfWwxZFffa2V3D77sJNNyfLlWPYRUt46KvJ5YdTcnsnaEsrcDWD5M5TebyI8elz9HqaZoyvHEo18SzPsWcETNzv-N5YGdnN-F5A9KsVVm5wAmIQXyWmERVs3XFiyP-mkUJv3KnNLJTsWeC1zPHLdxRg0eVcv3KgGQAAAAGGL-mXAA'
 
 app = Client('promo_bot', api_id=api_id, api_hash=api_hash, session_string=session)
 mongo_client = MongoClient('mongodb+srv://rohit6205881743:rohit6205881743@cluster0.soqtewz.mongodb.net/')
@@ -65,7 +65,7 @@ async def safe_forward(chat_id, source_chat, source_message):
 
 async def hourly_promo():
     while True:
-        await asyncio.sleep(10)  # Sleep first before processing
+        await asyncio.sleep(900)  # Sleep first before processing
         promo = get_promo()
         if promo:
             async with forward_lock:
